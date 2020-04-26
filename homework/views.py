@@ -7,6 +7,19 @@ class IndexView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
+
+        '''
+        student = Student('Petr')
+        statistics = Statistics(scores)
+        context.update(
+            {
+                'students_statistics': bad_students.get_data(),
+                'excellent_students': statistics.get_exelent_students(),
+                'bad_students': statistics.get_bad_students()
+            }
+        )
+        '''
+
         context.update(
             {
                 'students_statistics': [
@@ -27,6 +40,11 @@ class IndexView(TemplateView):
         )
         return context
 
+    '''
+    def _generate_test_data(self):
+        student = Student('Petr')
+        return scores
+    '''
 
 class Student:
     pass
