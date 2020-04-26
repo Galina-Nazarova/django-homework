@@ -18,6 +18,7 @@ class IndexView(TemplateView):
                 'bad_students': statistics.get_bad_students()
             }
         )
+        проверка
         '''
 
         context.update(
